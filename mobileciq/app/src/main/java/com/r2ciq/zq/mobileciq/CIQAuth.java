@@ -6,11 +6,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class CIQAuth extends Activity {
-    private EditText userNameInput;
-    private EditText passWordInput;
+    private EditText username;
+    private EditText password;
+    private TextView authMessageArea;
+    private ImageView authSpinner;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)

@@ -27,4 +27,18 @@
         android:src="@drawable/GoIcon"
         android:layout_gravity="center_horizontal"
         android:onClick="submitCredentials"/>
+    <ImageView
+        android:id="@+id/authSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/spinner"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"/>
+    <TextView
+        android:id="@+id/authResponseArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/ERROR_RED"
+        android:visibility="gone"/>
 </LinearLayout>

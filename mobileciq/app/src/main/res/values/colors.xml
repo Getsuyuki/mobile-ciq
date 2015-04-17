@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="WHITE">#f9ffff</color>
+    <color name="WHITE">#fff9ffff</color>
     <color name="TGREY">#80c1c1c9</color>
+    <color name="ERROR_RED">#ffd82b25</color>
 </resources>

@@ -3,9 +3,10 @@
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomePage">
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomePage"
+    android:background="@drawable/gradient_bg">
 
     <TextView android:text="@string/hello_world" android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-
+<!--http://code.tutsplus.com/tutorials/android-sdk-creating-custom-views\-\-mobile-14548-->
 </RelativeLayout>
