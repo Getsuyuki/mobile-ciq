@@ -3,4 +3,12 @@
 
     <string name="hello_world">Mina-sama, Ohayou!</string>
     <string name="action_settings">Settings</string>
+
+    <string-array name="studionames">
+        <item>Dashboard</item>
+        <item>RiskFactor</item>
+        <item>Scenario</item>
+        <item>Product</item>
+        <item>Simulation</item>
+    </string-array>
 </resources>
