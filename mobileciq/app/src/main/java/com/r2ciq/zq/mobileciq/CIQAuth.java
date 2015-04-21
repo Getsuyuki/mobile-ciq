@@ -1,6 +1,7 @@
 package com.r2ciq.zq.mobileciq;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -40,6 +41,8 @@ public class CIQAuth extends Activity {
     //2. after server is set up, it will perform http post via async while spinner loads
     public void sendAuthRequest ()
     {
-
+        Intent i = new Intent(CIQAuth.this, HomePage.class);
+        startActivity(i);
+        finish();
     }
 }

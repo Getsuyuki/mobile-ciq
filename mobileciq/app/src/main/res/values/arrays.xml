@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <array name="icons">
+    <integer-array name="icons">
         <item>@drawable/dashboardicon</item>
         <item>@drawable/riskfactoricon</item>
         <item>@drawable/scenarioicon</item>
         <item>@drawable/producticon</item>
         <item>@drawable/simulationicon</item>
-    </array>
+    </integer-array>
 </resources>
