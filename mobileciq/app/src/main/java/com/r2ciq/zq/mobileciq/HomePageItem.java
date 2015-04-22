@@ -3,8 +3,10 @@ package com.r2ciq.zq.mobileciq;
 import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
+import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -20,18 +22,43 @@ public class HomePageItem extends RelativeLayout{
     }
 
     public void setIcon (int iconId){
-        ImageView iv = (ImageView) findView(ImageView.class);
+        ImageView iv = (ImageView) this.findViewById(R.id.home_page_icon);
         iv.setImageResource(iconId);
     }
 
     public void setName (String name){
-        TextView tv = (TextView) findView(TextView.class);
+        TextView tv = (TextView) this.findViewById(R.id.home_page_label);
         tv.setText(name);
     }
 
-    //TODO: any others things? maybe drawing?
+    public void setStyleParams () {
+        setLayoutDimensions();
+        //formatInnerViews();
+        this.setGravity(CENTER_IN_PARENT);
+    }
+
+    private void setLayoutDimensions(){
+        int imageWidth = measureImage();
+        this.setLayoutParams(new LayoutParams(imageWidth + 60
+                                          ,LayoutParams.MATCH_PARENT));
+    }
+
+    private int measureImage(){
+        ImageView iv = (ImageView) this.findViewById(R.id.home_page_icon);
+        return iv.getDrawable().getIntrinsicWidth();
+    }
+
+    @Deprecated
+    private void formatInnerViews (){
+        TextView tv = (TextView) this.findViewById(R.id.home_page_label);
+        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+        lp.addRule(RelativeLayout.BELOW, R.id.home_page_icon);
+        tv.setLayoutParams(lp);
+    }
 
     //what is reflection
+    @Deprecated
     private View findView (Class viewClass){
         View v = null;
         int viewCount = this.getChildCount();
@@ -45,4 +72,3 @@ public class HomePageItem extends RelativeLayout{
         return null;
     }
 }
-

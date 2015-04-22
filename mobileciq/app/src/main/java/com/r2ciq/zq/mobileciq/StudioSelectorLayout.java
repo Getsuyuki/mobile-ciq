@@ -54,7 +54,22 @@ public class StudioSelectorLayout extends HorizontalScrollView
                             a.getResourceId(R.styleable.StudioSelectorLayout_names, 0)));
         setStudioItems(mStudios);
 
-        //todo:FINISH INITIALIZATION AND ATTACH LISTENERS AND GESTURES
+        setOnTouchListener(new OnTouchListener(){
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                if (mGestureDetector.onTouchEvent(event)) {
+                    return true;
+                }
+                else if (event.getAction() == MotionEvent.ACTION_UP ||
+                         event.getAction() == MotionEvent.ACTION_CANCEL){
+                    onSwipe(v);
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        });
     }
 
     public void createStudioItems (int[] icons, String[] names){
@@ -72,12 +87,10 @@ public class StudioSelectorLayout extends HorizontalScrollView
 
     public HomePageItem configureStudioItem(int iconId, String name){
         HomePageItem studio = new HomePageItem(getContext());
-        studio.setLayoutParams(new ViewGroup.LayoutParams(
-                LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT));
         studio.setIcon(iconId);
         studio.setName(name);
+        studio.setStyleParams();
 
-        //TODO: FINISH FORMATTING
         return studio;
     }
 
@@ -94,6 +107,8 @@ public class StudioSelectorLayout extends HorizontalScrollView
             studioItemsWrapper.addView(items.get(i));
         }
     }
+
+    //http://www.velir.com/blog/index.php/2010/11/17/android-snapping-horizontal-scroll/
 
     private boolean onSwipe (View view){
         int scrollX = getScrollX();

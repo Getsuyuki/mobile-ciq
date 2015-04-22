@@ -5,5 +5,6 @@
         <attr name="icons" format="reference"/>
         <attr name="android:layout_gravity"/>
         <attr name="android:weight"/>
+        <attr name="android:id"/>
     </declare-styleable>
 </resources>
