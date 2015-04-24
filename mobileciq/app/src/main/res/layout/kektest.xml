@@ -11,21 +11,12 @@
 
     <com.r2ciq.zq.mobileciq.StudioSelectorLayout
         android:id="@+id/mainmenu"
-        android:layout_gravity="center_horizontal"
-        android:layout_height="0dp"
-        android:layout_width="0dp"
-        android:layout_weight="1"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
         r2ciq:icons="@array/icons"
         r2ciq:names="@array/studionames"
         />
-    <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:textColor="@color/material_blue_grey_800"
-        android:text="@string/copyrightm"
-        android:textSize="13sp"/>
-<!--http://code.tutsplus.com/tutorials/android-sdk-creating-custom-views\-\-mobile-14548-->
-<!--http://javatechig.com/android/creating-custom-views-in-android-tutorial-->
-<!--http://www.vogella.com/tutorials/AndroidCustomViews/article.html-->
+    <!--http://code.tutsplus.com/tutorials/android-sdk-creating-custom-views\-\-mobile-14548-->
+    <!--http://javatechig.com/android/creating-custom-views-in-android-tutorial-->
+    <!--http://www.vogella.com/tutorials/AndroidCustomViews/article.html-->
 </LinearLayout>
-<!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/layout/activity_home_page.xml -->

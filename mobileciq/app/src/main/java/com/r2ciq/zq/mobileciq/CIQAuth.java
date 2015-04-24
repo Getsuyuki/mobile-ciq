@@ -42,6 +42,7 @@ public class CIQAuth extends Activity {
     public void sendAuthRequest ()
     {
         Intent i = new Intent(CIQAuth.this, HomePage.class);
+        //Intent i = new Intent(CIQAuth.this, testmain.class);
         startActivity(i);
         finish();
     }

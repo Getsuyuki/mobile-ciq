@@ -1,6 +1,7 @@
 package com.r2ciq.zq.mobileciq;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
@@ -65,7 +66,7 @@ public class StudioSelectorLayout extends HorizontalScrollView
                             a.getResourceId(R.styleable.StudioSelectorLayout_names, 0)));
         setStudioItems(mStudios);
 
-        setViewStyles();
+        //setViewStyles();
 
         setOnTouchListener(new OnTouchListener(){
             @Override
@@ -110,13 +111,25 @@ public class StudioSelectorLayout extends HorizontalScrollView
         studio.setStyleParams();
         //todo: fix this to work for all
         studioWidth = studio.getmSize();
+
+        studio.setClickable(true);
+        studio.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                HomePageItem view = (HomePageItem) v;
+                Intent i = new Intent();
+                i.setAction("SELECTSTUDIO");
+                i.putExtra("launchstudio", view.getName());
+                v.getContext().sendBroadcast(i);
+            }
+        });
         return studio;
     }
 
     public void setStudioItems (ArrayList<RelativeLayout> items) {
         LinearLayout studioItemsWrapper = new LinearLayout(getContext());
         studioItemsWrapper.setLayoutParams(new ViewGroup.LayoutParams(
-                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT
+                LayoutParams.WRAP_CONTENT, LayoutParams.MATCH_PARENT
         ));
         studioItemsWrapper.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -127,10 +140,11 @@ public class StudioSelectorLayout extends HorizontalScrollView
         }
     }
 
-    private void setViewStyles (){
+    public void setViewStyles (){
         LinearLayout.LayoutParams lp = (new LinearLayout.LayoutParams(studioWidth,
                                             0,
                                             1));
+        this.setLayoutParams(lp);
 
         setScrollbarFadingEnabled(true);
     }

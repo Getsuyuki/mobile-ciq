@@ -1325,26 +1325,29 @@ containing a value of this type.
         public static final int abc_textfield_search_activated_mtrl_alpha=0x7f020034;
         public static final int abc_textfield_search_default_mtrl_alpha=0x7f020035;
         public static final int abc_textfield_search_material=0x7f020036;
-        public static final int ciqlogo=0x7f020037;
-        public static final int dashboardicon=0x7f020038;
-        public static final int goicon=0x7f020039;
-        public static final int gradient_bg=0x7f02003a;
-        public static final int icon=0x7f02003b;
-        public static final int producticon=0x7f02003c;
-        public static final int r2logo=0x7f02003d;
-        public static final int riskfactoricon=0x7f02003e;
-        public static final int scenarioicon=0x7f02003f;
-        public static final int shadow_black_9=0x7f020040;
-        public static final int simulationicon=0x7f020041;
-        public static final int spin1=0x7f020042;
-        public static final int spin2=0x7f020043;
-        public static final int spin3=0x7f020044;
-        public static final int spin4=0x7f020045;
-        public static final int spin5=0x7f020046;
-        public static final int spin6=0x7f020047;
-        public static final int spin7=0x7f020048;
-        public static final int spin8=0x7f020049;
-        public static final int spinner=0x7f02004a;
+        public static final int add_icon_grey_16x16=0x7f020037;
+        public static final int ciqlogo=0x7f020038;
+        public static final int dashboardicon=0x7f020039;
+        public static final int goicon=0x7f02003a;
+        public static final int gradient_bg=0x7f02003b;
+        public static final int home_icon_grey=0x7f02003c;
+        public static final int icon=0x7f02003d;
+        public static final int producticon=0x7f02003e;
+        public static final int r2logo=0x7f02003f;
+        public static final int riskfactoricon=0x7f020040;
+        public static final int save_16x16=0x7f020041;
+        public static final int scenarioicon=0x7f020042;
+        public static final int shadow_black_9=0x7f020043;
+        public static final int simulationicon=0x7f020044;
+        public static final int spin1=0x7f020045;
+        public static final int spin2=0x7f020046;
+        public static final int spin3=0x7f020047;
+        public static final int spin4=0x7f020048;
+        public static final int spin5=0x7f020049;
+        public static final int spin6=0x7f02004a;
+        public static final int spin7=0x7f02004b;
+        public static final int spin8=0x7f02004c;
+        public static final int spinner=0x7f02004d;
     }
     public static final class id {
         public static final int action_bar=0x7f0a0031;
@@ -1360,8 +1363,9 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f0a002e;
         public static final int action_mode_bar_stub=0x7f0a002d;
         public static final int action_mode_close_button=0x7f0a0020;
-        public static final int action_settings=0x7f0a0048;
+        public static final int action_settings=0x7f0a004b;
         public static final int activity_chooser_view_content=0x7f0a0021;
+        public static final int add_studioItem=0x7f0a0049;
         public static final int always=0x7f0a0016;
         public static final int authResponseArea=0x7f0a0043;
         public static final int authSpinner=0x7f0a0042;
@@ -1377,10 +1381,11 @@ containing a value of this type.
         public static final int end=0x7f0a0014;
         public static final int expand_activities_button=0x7f0a0022;
         public static final int expanded_menu=0x7f0a0028;
+        public static final int go_home=0x7f0a004a;
         public static final int home=0x7f0a0004;
         public static final int homeAsUp=0x7f0a000d;
-        public static final int home_page_icon=0x7f0a0046;
-        public static final int home_page_label=0x7f0a0047;
+        public static final int home_page_icon=0x7f0a0047;
+        public static final int home_page_label=0x7f0a0048;
         public static final int icon=0x7f0a0026;
         public static final int ifRoom=0x7f0a0018;
         public static final int image=0x7f0a0023;
@@ -1395,6 +1400,7 @@ containing a value of this type.
         public static final int progress_circular=0x7f0a0005;
         public static final int progress_horizontal=0x7f0a0006;
         public static final int radio=0x7f0a002b;
+        public static final int rfSpaceView=0x7f0a0045;
         public static final int search_badge=0x7f0a0035;
         public static final int search_bar=0x7f0a0034;
         public static final int search_button=0x7f0a0036;
@@ -1409,7 +1415,7 @@ containing a value of this type.
         public static final int showCustom=0x7f0a000f;
         public static final int showHome=0x7f0a0010;
         public static final int showTitle=0x7f0a0011;
-        public static final int splash_icon=0x7f0a0045;
+        public static final int splash_icon=0x7f0a0046;
         public static final int split_action_bar=0x7f0a0007;
         public static final int submitAuthInfo=0x7f0a0041;
         public static final int submit_area=0x7f0a003c;
@@ -1451,9 +1457,11 @@ containing a value of this type.
         public static final int abc_simple_dropdown_hint=0x7f040015;
         public static final int activity_ciq_auth=0x7f040016;
         public static final int activity_home_page=0x7f040017;
-        public static final int activity_splash=0x7f040018;
-        public static final int home_page_item=0x7f040019;
-        public static final int support_simple_spinner_dropdown_item=0x7f04001a;
+        public static final int activity_rfstudio=0x7f040018;
+        public static final int activity_splash=0x7f040019;
+        public static final int home_page_item=0x7f04001a;
+        public static final int kektest=0x7f04001b;
+        public static final int support_simple_spinner_dropdown_item=0x7f04001c;
     }
     public static final class menu {
         public static final int menu_home_page=0x7f0e0000;
@@ -1478,10 +1486,12 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with=0x7f0c000d;
         public static final int abc_shareactionprovider_share_with_application=0x7f0c000e;
         public static final int abc_toolbar_collapse_description=0x7f0c000f;
-        public static final int action_settings=0x7f0c0010;
-        public static final int app_name=0x7f0c0011;
-        public static final int copyrightm=0x7f0c0012;
-        public static final int hello_world=0x7f0c0013;
+        public static final int action_add=0x7f0c0010;
+        public static final int action_home=0x7f0c0011;
+        public static final int action_settings=0x7f0c0012;
+        public static final int app_name=0x7f0c0013;
+        public static final int copyrightm=0x7f0c0014;
+        public static final int hello_world=0x7f0c0015;
     }
     public static final class style {
         public static final int Animation_AppCompat_DropDownUp=0x7f0d0000;

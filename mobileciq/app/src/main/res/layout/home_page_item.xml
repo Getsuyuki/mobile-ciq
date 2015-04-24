@@ -4,7 +4,7 @@
         android:id="@+id/home_page_icon"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="18dp"
         />
     <TextView
@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"
         android:layout_below="@id/home_page_icon"
-        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true"
         android:textColor="@color/WHITE"
         android:textSize="18sp"/>
 </merge>
