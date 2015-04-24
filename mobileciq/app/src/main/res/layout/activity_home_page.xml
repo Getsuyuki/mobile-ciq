@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:r2ciq="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -9,9 +10,13 @@
 
     <com.r2ciq.zq.mobileciq.StudioSelectorLayout
         android:id="@+id/mainmenu"
-        android:layout_height="0dp"
-        android:weight="1"
-        android:layout_width="fill_parent"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_height="800dp"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        r2ciq:icons="@array/icons"
+        r2ciq:names="@array/studionames"
+        />
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="wrap_content"

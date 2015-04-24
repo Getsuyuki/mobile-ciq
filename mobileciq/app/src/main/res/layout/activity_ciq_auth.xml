@@ -24,7 +24,7 @@
         android:id="@+id/submitAuthInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/GoIcon"
+        android:src="@drawable/goicon"
         android:layout_gravity="center_horizontal"
         android:onClick="submitCredentials"/>
     <ImageView

@@ -7,15 +7,15 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/splash_icon"
+        android:layout_above="@+id/splash_icon"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
-        android:src="@drawable/CIQLogo"
+        android:src="@drawable/ciqlogo"
     />
     <ImageView
         android:id="@+id/splash_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent = "true"
-        android:src="@drawable/R2Logo"/>
+        android:src="@drawable/r2logo"/>
 </RelativeLayout>
