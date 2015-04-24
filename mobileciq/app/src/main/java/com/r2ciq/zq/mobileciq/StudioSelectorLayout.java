@@ -116,7 +116,7 @@ public class StudioSelectorLayout extends HorizontalScrollView
     public void setStudioItems (ArrayList<RelativeLayout> items) {
         LinearLayout studioItemsWrapper = new LinearLayout(getContext());
         studioItemsWrapper.setLayoutParams(new ViewGroup.LayoutParams(
-                LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT
+                LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT
         ));
         studioItemsWrapper.setOrientation(LinearLayout.HORIZONTAL);
 
@@ -131,6 +131,7 @@ public class StudioSelectorLayout extends HorizontalScrollView
         LinearLayout.LayoutParams lp = (new LinearLayout.LayoutParams(studioWidth,
                                             0,
                                             1));
+        this.setLayoutParams(lp);
 
         setScrollbarFadingEnabled(true);
     }
