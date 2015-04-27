@@ -1,0 +1,6 @@
+C:\dev\Android\finalproject\AndroidTestService\AndroidTestService\bin\AndroidTestService.dll.config
+C:\dev\Android\finalproject\AndroidTestService\AndroidTestService\bin\AndroidTestService.dll
+C:\dev\Android\finalproject\AndroidTestService\AndroidTestService\bin\AndroidTestService.pdb
+C:\dev\Android\finalproject\AndroidTestService\AndroidTestService\obj\Debug\AndroidTestService.csprojResolveAssemblyReference.cache
+C:\dev\Android\finalproject\AndroidTestService\AndroidTestService\obj\Debug\AndroidTestService.dll
+C:\dev\Android\finalproject\AndroidTestService\AndroidTestService\obj\Debug\AndroidTestService.pdb
