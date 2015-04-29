@@ -26,6 +26,23 @@
             android:name=".HomePage"
             android:label="@string/app_name">
         </activity>
+        <activity
+            android:name=".testmain"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".RiskFactor"
+            android:label="Mobile CIQ">
+        </activity>
+        <receiver
+            android:enabled="true"
+            android:name=".StudioSwitcher"
+            android:label="@string/app_name"
+            >
+            <intent-filter>
+                <action android:name="SELECTSTUDIO"></action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

@@ -6,12 +6,13 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomePage"
     android:background="@drawable/gradient_bg"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
 
     <com.r2ciq.zq.mobileciq.StudioSelectorLayout
         android:id="@+id/mainmenu"
         android:layout_gravity="center_horizontal"
-        android:layout_height="800dp"
+        android:layout_height="0dp"
         android:layout_width="0dp"
         android:layout_weight="1"
         r2ciq:icons="@array/icons"

@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:r2ciq="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".HomePage"
+    android:background="@drawable/gradient_bg"
+    android:orientation="vertical"
+    android:gravity="center_horizontal">
+
+    <com.r2ciq.zq.mobileciq.StudioSelectorLayout
+        android:id="@+id/mainmenu"
+        android:layout_height="fill_parent"
+        android:layout_width="fill_parent"
+        r2ciq:icons="@array/icons"
+        r2ciq:names="@array/studionames"
+        />
+    <!--http://code.tutsplus.com/tutorials/android-sdk-creating-custom-views\-\-mobile-14548-->
+    <!--http://javatechig.com/android/creating-custom-views-in-android-tutorial-->
+    <!--http://www.vogella.com/tutorials/AndroidCustomViews/article.html-->
+</LinearLayout>

@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 public class HomePageItem extends RelativeLayout{
     private int mSize;
+    private String name;
 
     public HomePageItem(Context context){
         super (context);
@@ -33,8 +34,11 @@ public class HomePageItem extends RelativeLayout{
     public void setName (String name){
         TextView tv = (TextView) this.findViewById(R.id.home_page_label);
         tv.setText(name);
+        this.name = name;
         this.invalidate();
     }
+
+    public String getName (){ return this.name;}
 
     public void setStyleParams () {
         setLayoutDimensions();
@@ -49,7 +53,7 @@ public class HomePageItem extends RelativeLayout{
 
     private void setLayoutDimensions(){
         int imageWidth = measureImage();
-        mSize = imageWidth + 60;
+        mSize = imageWidth + 200;
         this.setLayoutParams(new LayoutParams(mSize
                                               ,LayoutParams.MATCH_PARENT));
     }
