@@ -11,7 +11,7 @@
     <com.r2ciq.zq.mobileciq.StudioSelectorLayout
         android:id="@+id/mainmenu"
         android:layout_gravity="center_horizontal"
-        android:layout_height="0dp"
+        android:layout_height="800dp"
         android:layout_width="0dp"
         android:layout_weight="1"
         r2ciq:icons="@array/icons"

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <array name="icons">
-        <item>@drawable/dashboardicon0</item>
-        <item>@drawable/riskfactoricon0</item>
-        <item>@drawable/scenarioicon0</item>
-        <item>@drawable/producticon0</item>
-        <item>@drawable/simulationicon0</item>
+        <item>@drawable/dashboardicon</item>
+        <item>@drawable/riskfactoricon</item>
+        <item>@drawable/scenarioicon</item>
+        <item>@drawable/producticon</item>
+        <item>@drawable/simulationicon</item>
     </array>
 </resources>
