@@ -8,7 +8,9 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -32,6 +34,7 @@ public class CIQAuth extends Activity {
     private EditText password;
     private TextView authMessageArea;
     private ImageView authSpinner;
+    private ImageButton submit;
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
 
@@ -44,6 +47,7 @@ public class CIQAuth extends Activity {
         password = (EditText)findViewById(R.id.password);
         authMessageArea = (TextView) findViewById(R.id.authResponseArea);
         authSpinner = (ImageView) findViewById(R.id.authSpinner);
+        submit = (ImageButton) findViewById(R.id.submitAuthInfo);
     }
 
     public void submitCredentials (View view)
@@ -58,7 +62,7 @@ public class CIQAuth extends Activity {
             jsonFailure();
         }
         //SubmitAuthRequest("http://echo.jsontest.com/UserName/jweber/Password/password");
-        SubmitAuthRequest("http://10.185.16.140/AppServices/api/Login/AuthenticateX", body);
+        SubmitAuthRequest("http://10.185.16.140/AppServices/api/Login/Authenticate", body);
         //startAppRequest();
         //will not perform network requests before serverside is set up
     }
@@ -66,6 +70,7 @@ public class CIQAuth extends Activity {
     private void disableFields() {
         username.setEnabled(false);
         password.setEnabled(false);
+        submit.setEnabled(false);
     }
 
     private void showSpinner() {
@@ -81,13 +86,19 @@ public class CIQAuth extends Activity {
     }
 
     private void revert() {
-        username.setEnabled(true);
-        password.setEnabled(true);
-        AnimationDrawable spinner = (AnimationDrawable)authSpinner.getDrawable();
-        spinner.stop();
-        authSpinner.setVisibility(View.GONE);
-        authMessageArea.setVisibility(View.VISIBLE);
-        authMessageArea.setText("Login Failed");  //the pokemon failure handling is real (/._.)/
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                username.setEnabled(true);
+                password.setEnabled(true);
+                AnimationDrawable spinner = (AnimationDrawable)authSpinner.getDrawable();
+                spinner.stop();
+                authSpinner.setVisibility(View.GONE);
+                authMessageArea.setVisibility(View.VISIBLE);
+                authMessageArea.setText("Login Failed");  //the pokemon failure handling is real (/._.)/
+                submit.setEnabled(true);
+            }
+        });
     }
 
     private String buildJSon(String user, String pw) throws JSONException {
@@ -114,38 +125,25 @@ public class CIQAuth extends Activity {
         call.enqueue(new Callback() {
             @Override
             public void onFailure(Request request, IOException e) {
-                Log.w ("kek", e);
-                runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        revert();
-                    }
-                });
+                Log.w("kek", e);
+                revert();
             }
+
 
             @Override
             public void onResponse(Response response) throws IOException {
-                if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-                authenticate(response);
+                if (!response.isSuccessful())
+                {
+                    revert();
+                    return;
+                }
+                authenticate();
             }
         });
     }
 
-    public void authenticate(Response response){
-        try {
-            JSONObject receivedResponse = new JSONObject(response.body().string());
-            Log.w("kek", receivedResponse.toString());
+    public void authenticate(){
             startAppRequest();
-        }
-        catch (JSONException | IOException e) {
-            Log.w("kek", e);
-            runOnUiThread(new Runnable() {
-                @Override
-                public void run() {
-                    revert();
-                }
-            });
-        }
     }
 
     //1. before server is set up, it will do nothing

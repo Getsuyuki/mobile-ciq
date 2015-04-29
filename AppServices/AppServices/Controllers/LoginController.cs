@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Dynamic;
+using System.Web;
 using System.Web.Http;
 using AppServices.Models;
 
@@ -17,7 +18,7 @@ namespace AppServices.Controllers
 
             if (!(pw.Equals("password") && id.Equals("jweber")))
             {
-                isSuccess = false;
+                throw new HttpException(500, "Unauthorized");
             }
 
             return isSuccess;
