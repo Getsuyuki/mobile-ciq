@@ -37,20 +37,11 @@ public class StudioSelectorLayout extends HorizontalScrollView
 
     public StudioSelectorLayout(Context context, AttributeSet attrs) {
         super(context, attrs);
-        //inflate(context);
         init(context, attrs);
-    }
-
-    public void inflate(Context context){
-        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        if (layoutInflater != null) {
-            layoutInflater.inflate(R.layout.activity_home_page, this, true);
-        }
     }
 
     public StudioSelectorLayout(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
-        //inflate(context);
         init(context, attrs);
     }
 
