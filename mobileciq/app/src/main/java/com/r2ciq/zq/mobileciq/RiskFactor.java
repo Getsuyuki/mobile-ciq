@@ -1,6 +1,8 @@
 package com.r2ciq.zq.mobileciq;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.DataSetObserver;
 import android.graphics.drawable.AnimationDrawable;
@@ -13,8 +15,10 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
@@ -141,7 +145,21 @@ public class RiskFactor extends ActionBarActivity{
             @Override
             public void run() {
                 itemsAdp.notifyDataSetChanged();
+                registerListeners();
                 revert();
+            }
+        });
+    }
+
+    private void registerListeners() {
+        spaceView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                SpaceItem item = (SpaceItem)parent.getItemAtPosition(position);
+                    Intent i = new Intent(RiskFactor.this, EvolutionModel.class);
+                    i.putExtra("ID",item.spaceItemName);
+                    startActivity(i);
+                    finish();
             }
         });
     }
@@ -179,6 +197,26 @@ public class RiskFactor extends ActionBarActivity{
     }
 
     private void addRFItem() {
-        Log.w("kek","notimplemented");
+        AlertDialog.Builder addItem = new AlertDialog.Builder(this)
+                .setTitle("Add Item")
+                .setMessage("New EM ID");
+
+        final EditText input = new EditText(this);
+        addItem.setView(input);
+
+        addItem.setPositiveButton("Add", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Intent i = new Intent(RiskFactor.this, EvolutionModel.class);
+                i.putExtra("ID", input.getText());
+                startActivity(i);
+                finish();
+            }
+        })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int which) {
+                    }
+                })
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .show();
     }
 }

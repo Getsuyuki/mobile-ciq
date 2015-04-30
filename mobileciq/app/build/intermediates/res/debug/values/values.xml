@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/arrays.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/src/main/res/values/arrays.xml -->
     <eat-comment/>
     <array name="icons">
         <item>@drawable/dashboardicon</item>
@@ -9,7 +9,7 @@
         <item>@drawable/producticon</item>
         <item>@drawable/simulationicon</item>
     </array>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string-array name="studionames">
         <item>Dashboard</item>
@@ -18,7 +18,7 @@
         <item>Product</item>
         <item>Simulation</item>
     </string-array>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <attr format="reference" name="drawerArrowStyle"/>
     <attr format="dimension" name="height"/>
@@ -30,12 +30,12 @@
     <bool name="abc_config_actionMenuItemAllCaps">true</bool>
     <bool name="abc_config_allowActionMenuItemTextWithIcon">false</bool>
     <bool name="abc_config_showMenuShortcutsWhenKeyboardPresent">false</bool>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/colors.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/src/main/res/values/colors.xml -->
     <eat-comment/>
     <color name="ERROR_RED">#ffd82b25</color>
     <color name="TGREY">#80c1c1c9</color>
     <color name="WHITE">#fff9ffff</color>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <color name="abc_input_method_navigation_guard">@android:color/black</color>
     <color name="abc_search_url_text_normal">#7fa87f</color>
@@ -153,11 +153,11 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <item name="dialog_fixed_height_major" type="dimen">80%</item>
     <item name="dialog_fixed_height_minor" type="dimen">100%</item>
@@ -193,7 +193,7 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_add">Add Studio Item</string>
     <string name="action_home">Return Home</string>
@@ -201,10 +201,10 @@
     <string name="app_name">Mobile CIQ</string>
     <string name="copyrightm">\u00A92015 S\u0026P Capital IQ, a part of McGraw Hill Financial Inc</string>
     <string name="hello_world">Mina-sama, Ohayou!</string>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
@@ -219,7 +219,7 @@
         <item name="android:textColorHint">@color/WHITE</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
-    <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
+    <!-- From: file:/C:/Users/David/Desktop/Git/mobile-ciq/mobileciq/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.0.0/res/values/values.xml -->
     <eat-comment/>
     <style name="Base.Animation.AppCompat.DropDownUp" parent="android:Animation">
         <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>

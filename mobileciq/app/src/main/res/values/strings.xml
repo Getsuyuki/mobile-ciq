@@ -5,6 +5,8 @@
     <string name="action_settings">Settings</string>
     <string name="action_add">Add Studio Item</string>
     <string name="action_home">Return Home</string>
+    <string name="action_save">Save</string>
+
     <string name="copyrightm">\u00A92015 S\u0026P Capital IQ, a part of McGraw Hill Financial Inc</string>
 
     <string-array name="studionames">

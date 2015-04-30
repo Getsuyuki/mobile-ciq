@@ -13,6 +13,7 @@ import java.io.IOException;
  */
 @Deprecated
 public class SendRequest {
+    //instance?
     OkHttpClient client = new OkHttpClient();
 
     public String SubmitLoginCredentials (String url) throws IOException{

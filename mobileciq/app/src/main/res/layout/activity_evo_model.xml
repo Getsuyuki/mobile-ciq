@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@drawable/gradient_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="RFS"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="Horizon"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="EstimationMethod"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="DecayFactor"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="TimeWindow "/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="MDA"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+    </LinearLayout>
+</ScrollView>

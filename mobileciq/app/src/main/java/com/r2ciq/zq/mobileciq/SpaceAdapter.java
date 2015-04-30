@@ -24,7 +24,7 @@ public class SpaceAdapter extends ArrayAdapter<SpaceItem>{
         View v = convertView;
 
         if (v == null){
-            v = LayoutInflater.from(getContext()).inflate(R.layout.space_item, null);
+            v = LayoutInflater.from(getContext()).inflate(R.layout.space_item, parent, false);
         }
 
         SpaceItem item = getItem(position);

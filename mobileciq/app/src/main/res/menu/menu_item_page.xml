@@ -1,0 +1,19 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context=".EvolutionModel">
+
+    <item android:id="@+id/save_studioItem"
+        android:title="@string/action_save"
+        android:icon="@drawable/save_16x16"
+        app:showAsAction="ifRoom"
+        />
+    <item android:id="@+id/go_home"
+        android:title="@string/action_home"
+        android:icon="@drawable/home_icon_grey"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        android:orderInCategory="100"
+        app:showAsAction="never" />
+</menu>
