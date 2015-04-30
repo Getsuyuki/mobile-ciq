@@ -42,6 +42,10 @@
             android:name="com.r2ciq.zq.mobileciq.RiskFactor"
             android:label="Mobile CIQ" >
         </activity>
+        <activity
+            android:name="com.r2ciq.zq.mobileciq.EvolutionModel"
+            android:label="Mobile CIQ" >
+        </activity>
 
         <receiver
             android:name="com.r2ciq.zq.mobileciq.StudioSwitcher"

@@ -1,25 +1,35 @@
-﻿using System.Dynamic;
-using System.Web;
+﻿using System.Collections.Generic;
 using System.Web.Http;
+using AppServices.Core;
+using AppServices.Models;
 
 namespace AppServices.Controllers
 {
     public class RiskFactorController : ApiController
     {
-        //
-        // GET: /RiskFactor/
         [HttpGet]
-        public string[] RetreiveSpaces()
+        public IEnumerable<DiffusionModelDescriptor> DiffusionModelDescriptors()
         {
-            return new string[] { "Umi", "Sora", "Yomi", "Yuki", "Ami" };
+            return NoSql.Instance.GetDescriptors();
         }
 
-        //public ExpandoObject RetrieveSpaces()
-        //{
-        //    dynamic f = new ExpandoObject();
-        //    f.IDs = new string[] { "Umi", "Sora", "Yomi", "Yuki", "Ami" };
-        //    return f;
-        //}
+        [HttpGet]
+        public DiffusionModel DiffusionModel(string id)
+        {
+            return NoSql.Instance.GetItem(id);
+        }
+
+        [HttpPost]
+        public DiffusionModel SaveDiffusionModel([FromBody]DiffusionModel model)
+        {
+            return NoSql.Instance.SaveItem(model);
+        }
+
+        [HttpPost]
+        public bool RemoveDiffusionModel([FromBody]string id)
+        {
+            return NoSql.Instance.RemoveItem(id);
+        }
 
     }
 }

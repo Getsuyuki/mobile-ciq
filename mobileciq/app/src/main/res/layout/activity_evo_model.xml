@@ -10,50 +10,56 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="@color/material_blue_grey_800"
+            android:textColor="@color/WHITE"
             android:text="RFS"/>
         <EditText
+            android:id="@+id/rfsTB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="@color/material_blue_grey_800"
+            android:textColor="@color/WHITE"
             android:text="Horizon"/>
         <EditText
+            android:id="@+id/hTB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="@color/material_blue_grey_800"
+            android:textColor="@color/WHITE"
             android:text="EstimationMethod"/>
         <EditText
+            android:id="@+id/emTB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="@color/material_blue_grey_800"
+            android:textColor="@color/WHITE"
             android:text="DecayFactor"/>
         <EditText
+            android:id="@+id/dfTB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="@color/material_blue_grey_800"
+            android:textColor="@color/WHITE"
             android:text="TimeWindow "/>
         <EditText
+            android:id="@+id/twTB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="wrap_content"/>
         <TextView
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:textColor="@color/material_blue_grey_800"
+            android:textColor="@color/WHITE"
             android:text="MDA"/>
         <EditText
+            android:id="@+id/mdaTB"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="wrap_content"/>
     </LinearLayout>
 </ScrollView>

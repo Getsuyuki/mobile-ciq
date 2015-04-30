@@ -9,9 +9,11 @@ public class SpaceItem {
     public Drawable spaceItemIcon;
     public String spaceItemName;
     public String spaceItemDescription;
-    public SpaceItem (Drawable ico, String name, String d){
+    public String Id;
+    public SpaceItem (Drawable ico, String name, String Id, String d){
         spaceItemDescription = d;
         spaceItemIcon = ico;
         spaceItemName = name;
+        this.Id = Id;
     }
 }

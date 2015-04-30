@@ -66,8 +66,7 @@ public class RiskFactor extends ActionBarActivity{
 
     private void getRFItems(){
         showSpinner();
-        sendRequest("http://10.185.16.140/AppServices/api/RiskFactor/RetrieveSpaces");
-        //sendRequest("http://10.185.16.140/AppServices/api/Login/AuthenticateX");
+        sendRequest("http://10.185.16.140/AppServices/api/RiskFactor/DiffusionModelDescriptors");
     }
 
     private void showSpinner() {
@@ -78,11 +77,16 @@ public class RiskFactor extends ActionBarActivity{
     }
 
     private void revert() {
-        AnimationDrawable spinDrawable = (AnimationDrawable) spinner.getDrawable();
-        // Start the animation (looped playback by default).
-        spinDrawable.stop();
-        spinner.setVisibility(View.GONE);
-        spaceView.setVisibility(View.VISIBLE);
+        runOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                AnimationDrawable spinDrawable = (AnimationDrawable) spinner.getDrawable();
+                // Start the animation (looped playback by default).
+                spinDrawable.stop();
+                spinner.setVisibility(View.GONE);
+                spaceView.setVisibility(View.VISIBLE);
+            }
+        });
     }
 
     private JSONArray parseToJSON (Response response) throws JSONException, IOException {
@@ -91,14 +95,14 @@ public class RiskFactor extends ActionBarActivity{
         return itemsJson;
     }
 
-    private void loadItems(JSONArray jsonObject) throws JSONException {
+    private void loadItems(JSONArray jsonArray) throws JSONException {
         //this part is sketchy, but can be altered to properly set according to item type
         //or based on a more complex json parsing function (that can be abstracted and reused)
         //to parse more complex JSON arrays
 
-        for (int i = 0; i<jsonObject.length(); i++) {
-
-            SpaceItem newItem = new SpaceItem(getDrawable(R.drawable.evoico),jsonObject.getString(i), "Evolution");
+        for (int i = 0; i<jsonArray.length(); i++) {
+            JSONObject jsonObj = jsonArray.getJSONObject(i);
+            SpaceItem newItem = new SpaceItem(getDrawable(R.drawable.evoico),jsonObj.getString("Name"),jsonObj.getString("Id"), "Evolution");
 
             items.add(newItem);
         }
@@ -111,7 +115,7 @@ public class RiskFactor extends ActionBarActivity{
 
         Request request = new Request.Builder()
                 .url(url)
-                //.addHeader("Accept", "application/json")
+                .addHeader("Accept", "application/json")
                 .build();
 
         Call call = client.newCall(request);
@@ -157,7 +161,9 @@ public class RiskFactor extends ActionBarActivity{
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 SpaceItem item = (SpaceItem)parent.getItemAtPosition(position);
                     Intent i = new Intent(RiskFactor.this, EvolutionModel.class);
-                    i.putExtra("ID",item.spaceItemName);
+                    i.putExtra("ID",item.Id);
+                    i.putExtra("NAME", item.spaceItemName);
+                    i.putExtra("ADD", false);
                     startActivity(i);
                     finish();
             }
@@ -199,7 +205,7 @@ public class RiskFactor extends ActionBarActivity{
     private void addRFItem() {
         AlertDialog.Builder addItem = new AlertDialog.Builder(this)
                 .setTitle("Add Item")
-                .setMessage("New EM ID");
+                .setMessage("New EM Name");
 
         final EditText input = new EditText(this);
         addItem.setView(input);
@@ -207,7 +213,8 @@ public class RiskFactor extends ActionBarActivity{
         addItem.setPositiveButton("Add", new DialogInterface.OnClickListener() {
             public void onClick(DialogInterface dialog, int which) {
                 Intent i = new Intent(RiskFactor.this, EvolutionModel.class);
-                i.putExtra("ID", input.getText());
+                i.putExtra("NAME", input.getText().toString());
+                i.putExtra("ADD", true);
                 startActivity(i);
                 finish();
             }

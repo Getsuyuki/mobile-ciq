@@ -34,6 +34,10 @@
             android:name=".RiskFactor"
             android:label="Mobile CIQ">
         </activity>
+        <activity
+            android:name=".EvolutionModel"
+            android:label="Mobile CIQ">
+        </activity>
         <receiver
             android:enabled="true"
             android:name=".StudioSwitcher"
