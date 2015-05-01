@@ -21,6 +21,9 @@ public class StudioRequestServices {
     public static final MediaType JSON
             = MediaType.parse("application/json; charset=utf-8");
 
+    public static final MediaType TEXT
+            = MediaType.parse("application/text; charset=utf-8");
+
     OkHttpClient client = new OkHttpClient();
 
     public Response getSpaceChild (String url) throws IOException{
@@ -38,6 +41,15 @@ public class StudioRequestServices {
         Request request = new Request.Builder()
                 .url(url)
                 .post(body)
+                .build();
+        Response response = client.newCall(request).execute();
+
+        return response.isSuccessful();
+    }
+
+    public boolean removeSpaceChild (String url) throws IOException  {
+        Request request = new Request.Builder()
+                .url(url)
                 .build();
         Response response = client.newCall(request).execute();
 

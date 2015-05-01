@@ -1377,6 +1377,7 @@ containing a value of this type.
         public static final int collapseActionView=0x7f0a0017;
         public static final int decor_content_parent=0x7f0a002f;
         public static final int default_activity_button=0x7f0a0024;
+        public static final int delete_studioitem=0x7f0a0057;
         public static final int dfTB=0x7f0a0047;
         public static final int dialog=0x7f0a001b;
         public static final int disableHome=0x7f0a000c;
@@ -1504,12 +1505,13 @@ containing a value of this type.
         public static final int abc_shareactionprovider_share_with_application=0x7f0c000e;
         public static final int abc_toolbar_collapse_description=0x7f0c000f;
         public static final int action_add=0x7f0c0010;
-        public static final int action_home=0x7f0c0011;
-        public static final int action_save=0x7f0c0012;
-        public static final int action_settings=0x7f0c0013;
-        public static final int app_name=0x7f0c0014;
-        public static final int copyrightm=0x7f0c0015;
-        public static final int hello_world=0x7f0c0016;
+        public static final int action_delete=0x7f0c0011;
+        public static final int action_home=0x7f0c0012;
+        public static final int action_save=0x7f0c0013;
+        public static final int action_settings=0x7f0c0014;
+        public static final int app_name=0x7f0c0015;
+        public static final int copyrightm=0x7f0c0016;
+        public static final int hello_world=0x7f0c0017;
     }
     public static final class style {
         public static final int Animation_AppCompat_DropDownUp=0x7f0d0000;

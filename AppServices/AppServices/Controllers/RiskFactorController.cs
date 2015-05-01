@@ -25,8 +25,8 @@ namespace AppServices.Controllers
             return NoSql.Instance.SaveItem(model);
         }
 
-        [HttpPost]
-        public bool RemoveDiffusionModel([FromBody]string id)
+        [HttpGet]
+        public bool RemoveDiffusionModel(string id)
         {
             return NoSql.Instance.RemoveItem(id);
         }

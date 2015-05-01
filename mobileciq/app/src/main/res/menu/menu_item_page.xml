@@ -5,7 +5,12 @@
     <item android:id="@+id/save_studioItem"
         android:title="@string/action_save"
         android:icon="@drawable/save_16x16"
-        app:showAsAction="ifRoom"
+        app:showAsAction="always"
+        />
+    <item android:id="@+id/delete_studioitem"
+        android:title="@string/action_delete"
+        android:icon="@drawable/trash_16x16"
+        app:showAsAction="always"
         />
     <item android:id="@+id/go_home"
         android:title="@string/action_home"

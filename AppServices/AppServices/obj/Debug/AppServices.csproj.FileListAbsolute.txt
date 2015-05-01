@@ -66,5 +66,6 @@ C:\dev\Android\finalproject\AppServices\AppServices\bin\ko\System.Spatial.resour
 C:\dev\Android\finalproject\AppServices\AppServices\bin\ru\System.Spatial.resources.dll
 C:\dev\Android\finalproject\AppServices\AppServices\bin\zh-Hans\System.Spatial.resources.dll
 C:\dev\Android\finalproject\AppServices\AppServices\bin\zh-Hant\System.Spatial.resources.dll
+C:\dev\Android\finalproject\AppServices\AppServices\obj\Debug\AppServices.csprojResolveAssemblyReference.cache
 C:\dev\Android\finalproject\AppServices\AppServices\obj\Debug\AppServices.dll
 C:\dev\Android\finalproject\AppServices\AppServices\obj\Debug\AppServices.pdb

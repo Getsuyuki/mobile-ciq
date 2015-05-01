@@ -196,6 +196,7 @@
     <!-- From: file:/C:/dev/Android/finalproject/MobileCIQ/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_add">Add Studio Item</string>
+    <string name="action_delete">Delete</string>
     <string name="action_home">Return Home</string>
     <string name="action_save">Save</string>
     <string name="action_settings">Settings</string>

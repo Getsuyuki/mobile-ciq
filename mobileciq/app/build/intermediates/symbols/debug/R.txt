@@ -401,6 +401,7 @@ int id checkbox 0x7f0a0029
 int id collapseActionView 0x7f0a0017
 int id decor_content_parent 0x7f0a002f
 int id default_activity_button 0x7f0a0024
+int id delete_studioitem 0x7f0a0057
 int id dfTB 0x7f0a0047
 int id dialog 0x7f0a001b
 int id disableHome 0x7f0a000c
@@ -518,12 +519,13 @@ int string abc_shareactionprovider_share_with 0x7f0c000d
 int string abc_shareactionprovider_share_with_application 0x7f0c000e
 int string abc_toolbar_collapse_description 0x7f0c000f
 int string action_add 0x7f0c0010
-int string action_home 0x7f0c0011
-int string action_save 0x7f0c0012
-int string action_settings 0x7f0c0013
-int string app_name 0x7f0c0014
-int string copyrightm 0x7f0c0015
-int string hello_world 0x7f0c0016
+int string action_delete 0x7f0c0011
+int string action_home 0x7f0c0012
+int string action_save 0x7f0c0013
+int string action_settings 0x7f0c0014
+int string app_name 0x7f0c0015
+int string copyrightm 0x7f0c0016
+int string hello_world 0x7f0c0017
 int style Animation_AppCompat_DropDownUp 0x7f0d0000
 int style AppTheme 0x7f0d0001
 int style AuthTextBox 0x7f0d0002

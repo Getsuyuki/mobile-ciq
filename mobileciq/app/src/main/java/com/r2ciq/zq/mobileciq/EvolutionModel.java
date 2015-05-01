@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.okhttp.Response;
 
@@ -24,6 +25,7 @@ public class EvolutionModel extends ActionBarActivity {
     public class RequestData{
         public JSONObject data;
         public String url;
+        public String Id;
     }
     private String Id;
     private String Name;
@@ -129,6 +131,9 @@ public class EvolutionModel extends ActionBarActivity {
             case R.id.save_studioItem:
                 saveRFItem();
                 return true;
+            case R.id.delete_studioitem:
+                deleteRFItem();
+                return true;
             case R.id.go_home:
                 goHome();
                 return true;
@@ -153,7 +158,34 @@ public class EvolutionModel extends ActionBarActivity {
         }).start();
     }
 
+    private void deleteRFItem() {
+        if (this.Id == null || this.Id.isEmpty()){
+            Toast.makeText(getApplicationContext(),"Cannot Delete New Item!",Toast.LENGTH_SHORT)
+            .show();
+            return;
+        }
+
+        rd.url = "http://10.185.16.140/AppServices/api/RiskFactor/RemoveDiffusionModel/" + this.Id;
+
+        new Thread (new Runnable() {
+            @Override
+            public void run() {
+                try {
+                    if (!ss.removeSpaceChild(rd.url))
+                        Log.w ("kek","deleteFailed");
+                    else{
+                        Intent i = new Intent (EvolutionModel.this, RiskFactor.class);
+                        startActivity(i);
+                    }
+                } catch (IOException e) {
+                    Log.w("kek", "le io exception-failed");
+                }
+            }
+        }).start();
+    }
+
     private JSONObject serialize() {
+        rd.Id = this.Id;
         JSONObject json = new JSONObject();
         try {
             json.put("ID", Id);
